@@ -25,11 +25,15 @@ function printArray() {
 
     animals = creatures;
 
-    return "<p>The array is full of creatures. There should be 3 of each type...</p>";
+    return {
+        text: "<p>The array is full of creatures. There should be 3 of each type...</p>",
+        data: creatures
+    };
 }
 
-message = printArray();
-message += "<p>There are " + creatures.fish.length + " fish.</p>";
+let message = printArray();
+message = result.text
+message += "<p>There are " + result.data.fish.length + " fish.</p>";
 
 document.getElementById("output").innerHTML = message;
 </script>
